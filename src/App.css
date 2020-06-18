@@ -27,7 +27,20 @@
   to { transform: rotate(360deg); }
 }
 
-
 div, button {
   margin: 10px;
+}
+
+.spotify-login {
+  margin: auto;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: blue;
+  width: 25%;
+}
+
+a > .spotify-login {
+  text-decoration: none;
+  color: #fff;
 }

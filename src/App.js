@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import TrackData from './components/TrackData';
+import Login from './components/Login';
+
 
 import SpotifyWebApi from 'spotify-web-api-js';
 const spotifyApi = new SpotifyWebApi();
@@ -14,7 +17,6 @@ class App extends Component {
     }
     this.state = {
       loggedIn: token ? true : false,
-      nowPlaying: { name: 'Not Checked', albumArt: '' }
     }
   }
   getHashParams() {
@@ -29,32 +31,43 @@ class App extends Component {
     return hashParams;
   }
 
-  getNowPlaying(){
-    spotifyApi.getMyCurrentPlaybackState()
-      .then((response) => {
-        this.setState({
-          nowPlaying: { 
-              name: response.item.name, 
-              albumArt: response.item.album.images[0].url
-            }
-        });
+  getUserTracks(){
+    spotifyApi.getMySavedTracks({limit : 50})
+    .then((response) => {
+      this.setState({
+        items : response.items,
+      });
+      var ids = [];
+      response.items.map((item) =>
+        ids.push(item.track.id)
+      );
+      
+      spotifyApi.getAudioFeaturesForTracks(ids)
+        .then((response) => {
+          this.setState({
+            audio_features : response.audio_features
+          })
+      }, function (err) {
+        console.log(err)
       })
+    }, function (err) {
+      console.log(err)
+    })
   }
+
   render() {
+    let state;
+    if (this.state.loggedIn) {
+      (this.state.items && this.state.audio_features) ? 
+        state = <TrackData tracks={this.state.items} features={this.state.audio_features}/> : 
+        this.getUserTracks();
+    } else {
+      state = <Login />
+    }
+    
     return (
       <div className="App">
-        <a href='http://localhost:8888' > Login to Spotify </a>
-        <div>
-          Now Playing: { this.state.nowPlaying.name }
-        </div>
-        <div>
-          <img src={this.state.nowPlaying.albumArt} style={{ height: 150 }}/>
-        </div>
-        { this.state.loggedIn &&
-          <button onClick={() => this.getNowPlaying()}>
-            Check Now Playing
-          </button>
-        }
+        {state}
       </div>
     );
   }
