@@ -44,3 +44,8 @@ a > .spotify-login {
   text-decoration: none;
   color: #fff;
 }
+
+.track-display {
+  margin: 100px auto;
+  padding: 20px auto;
+}

@@ -10,7 +10,7 @@ class TrackData extends Component {
       const options = {
         theme: "light2", 
         title: {
-          text: "Your Music Change Over 50 Songs"
+          text: "How Your Music Taste has Changed"
         },
         axisY: {
           title: "Multiple",
@@ -20,33 +20,16 @@ class TrackData extends Component {
           title: "Song",
           interval: 1
         },
-        data: [
-          {				
-          type: "line",
-          name: "",
-          dataPoints: []
+        toolTip: {
+          shared: true
         },
-        {				
-          type: "line",
-          name: "",
-          dataPoints: []
+        legend: {
+          cursor: "pointer",
+          verticalAlign: "top",
+          horizontalAlign: "center",
+          dockInsidePlotArea: true,
         },
-        {				
-          type: "line",
-          name: "",
-          dataPoints: []
-        },
-        {				
-          type: "line",
-          name: "",
-          dataPoints: []
-        },
-        {				
-          type: "line",
-          name: "",
-          dataPoints: []
-        },
-        ]
+        data: []
      }
 
       var label;
@@ -55,7 +38,7 @@ class TrackData extends Component {
       const type = [
         "danceability",
         "energy",
-        "liveness",
+        "liveness", 
         "speechiness",
         "valence"
       ]
@@ -65,15 +48,22 @@ class TrackData extends Component {
         for (var j = 0; j < type.length; j++) {
           property = type[j];
           point = this.props.features[i][property];
-          options.data[j].name = property;
-          options.data[j].dataPoints.push({label : label, y : point});
+
+          if (!options.data[j])
+            options.data.push({
+              type : "line", 
+              name : property,
+              axisYType : "secondary", 
+              showInLegend : true, 
+              markerSize: 0, 
+              dataPoints : []
+            }); 
+          options.data[j].dataPoints.push({label : label, x : i, y : point});
         }
       }
-
-      console.log(options);
       
      return (
-        <div>
+        <div className="track-display">
           <CanvasJSChart options = {options}
               /* onRef = {ref => this.chart = ref} */
           />
