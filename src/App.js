@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
-import TrackData from './components/TrackData';
+import Chart from './components/Chart';
 import Login from './components/Login';
-
-
+import Header from './components/Header';
+// import Footer from './components/Footer';
 import SpotifyWebApi from 'spotify-web-api-js';
+
+
+import './App.css';
+
 const spotifyApi = new SpotifyWebApi();
 
 class App extends Component {
@@ -59,7 +62,7 @@ class App extends Component {
     let state;
     if (this.state.loggedIn) {
       (this.state.items && this.state.audio_features) ? 
-        state = <TrackData tracks={this.state.items} features={this.state.audio_features}/> : 
+        state = <Chart tracks={this.state.items} features={this.state.audio_features}/> : 
         this.getUserTracks();
     } else {
       state = <Login />
@@ -67,7 +70,9 @@ class App extends Component {
     
     return (
       <div className="App">
+        <Header /> 
         {state}
+        {/* <Footer />  */}
       </div>
     );
   }

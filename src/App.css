@@ -1,51 +1,83 @@
+h1 {
+  font-size: 52px;
+  margin: 5px;
+  color: #092327;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+li + li {
+  padding-left: 12px;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.header {
+  padding: 12px;
+  background: rgb(255,200,0);
+  background: linear-gradient(90deg, rgba(255,200,0,1) 25%, rgba(255,132,39,1) 100%);
+  min-height: 300px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-div, button {
-  margin: 10px;
-}
-
-.spotify-login {
+.button {
   margin: auto;
   padding: 8px;
-  border: 1px solid black;
+  border: 1px solid #092327;
   border-radius: 10px;
-  background-color: blue;
-  width: 25%;
+  background-color: #092327;
+  transition: 0.3s;
 }
 
-a > .spotify-login {
-  text-decoration: none;
+.button:hover {
+  background-color: #FFFFFF;
+  color: #092327;
+}
+
+a > .button {
   color: #fff;
 }
 
+a {
+  text-decoration: none !important;
+}
 .track-display {
   margin: 100px auto;
   padding: 20px auto;
+}
+
+.feature {
+  margin: 5% auto;
+}
+
+.feature span {
+  font-size: 32px;
+  color: #092327;
+}
+
+.login {
+  width: 33.33%;
+  margin: 5% auto;
+}
+
+.home-button {
+  background-color: #FF8427;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #092327;
+  font-size: 20px;
+  margin: 20px;
+  color: #092327;
+  transition: 0.3s;
+}
+
+.home-button:hover {
+  background-color: #FFC800;
 }

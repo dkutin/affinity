@@ -4,7 +4,7 @@ import CanvasJSReact from '../assets/canvasjs.react';
 // var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-class TrackData extends Component {
+class Chart extends Component {
 
     render() {
       const options = {
@@ -18,7 +18,7 @@ class TrackData extends Component {
         },
         axisX: {
           title: "Song",
-          interval: 1
+          interval: 1,
         },
         toolTip: {
           shared: true
@@ -72,4 +72,4 @@ class TrackData extends Component {
     }
 }
 
-export default TrackData;
+export default Chart;
