@@ -8,6 +8,10 @@ Being a big fan of music, and listening to it for 6 hours a day while coding, I 
 https://affinity.dmitrykutin.com
 ** Work in Progress ** 
 
+Clone repo locally along with your favourite authentication method from https://github.com/spotify/web-api-auth-examples. 
+Follow set up methods from that repo. 
+Clone this repo to client directory. 
+
 ## Roadmap
 Simplify login page to be one button click (Instead of two, due to the implementation of authentication server) 
 Show user metrics based on song stats (ie. How danceable is your music? How wordy is it? Tempo, etc.) 
