@@ -26,8 +26,8 @@ class Chart extends Component {
         legend: {
           cursor: "pointer",
           verticalAlign: "top",
-          horizontalAlign: "center",
-          dockInsidePlotArea: true,
+          horizontalAlign: "left",
+          dockInsidePlotArea: false,
         },
         data: []
      }

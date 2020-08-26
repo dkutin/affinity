@@ -35,7 +35,7 @@ class App extends Component {
   }
 
   getUserTracks(){
-    spotifyApi.getMySavedTracks({limit : 50})
+    spotifyApi.getMySavedTracks({limit : 25})
     .then((response) => {
       this.setState({
         items : response.items,
