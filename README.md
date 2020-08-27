@@ -1,4 +1,6 @@
 # Affinity for Spotify
+![](https://github.com/dkutin/affinity/workflows/Deployment/badge.svg)
+
 Using Spotify's ability to score tracks based on 'affinity', I created an app that visualizes your change in music taste over time. 
 
 ## Motivation
@@ -8,14 +10,12 @@ Being a big fan of music, and listening to it for 6 hours a day while coding, I 
 https://affinity.dmitrykutin.com
 ** Work in Progress ** 
 
-Clone repo locally along with your favourite authentication method from https://github.com/spotify/web-api-auth-examples. 
-Follow set up methods from that repo. 
-Clone this repo to client directory. 
+Log in through spotify to see a visualization of your last 20 songs and common metrics associated with them.  
 
 ## Roadmap
-Simplify login page to be one button click (Instead of two, due to the implementation of authentication server) 
-Show user metrics based on song stats (ie. How danceable is your music? How wordy is it? Tempo, etc.) 
-Improve UI 
+ - Show user metrics based on song stats (ie. How danceable is your music? How wordy is it? Tempo, etc.).
+ - Improve UI and Front-end design (as back-end was the main focus thus far).
+ - Set up more workflows and contributing guidelines to encourage community contributions.
 
 ## License
 
