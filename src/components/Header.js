@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Social from './Social';
 
 class Header extends Component {
 
@@ -34,32 +35,7 @@ class Header extends Component {
                 <p>&nbsp;</p>
 
             </div>
-
-            <div className="links">
-                <ul>
-                    <li>
-                    <a href="https://github.com/dkutin">
-                        <div className="icons github-icon">
-                            &nbsp;
-                        </div>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="https://github.com/dkutin">
-                        <div className="icons spotify-icon">
-                            &nbsp;
-                        </div>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="https://github.com/dkutin">
-                        <div className="icons source-icon">
-                            &nbsp;
-                        </div>
-                    </a>
-                    </li>
-                </ul>
-            </div>
+            <Social />
         </div>);
     }
 }

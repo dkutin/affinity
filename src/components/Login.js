@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Social from './Social';
 
 class Login extends Component {
 
@@ -12,31 +12,7 @@ class Login extends Component {
                 <h1> Affinity </h1>
                 <p> a Spotify visualizer. </p>
             </div>
-            <div className="links">
-                <ul>
-                    <li>
-                    <a href="https://github.com/dkutin">
-                        <div className="icons github-icon">
-                            &nbsp;
-                        </div>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="https://github.com/dkutin">
-                        <div className="icons spotify-icon">
-                            &nbsp;
-                        </div>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="https://github.com/dkutin">
-                        <div className="icons source-icon">
-                            &nbsp;
-                        </div>
-                    </a>
-                    </li>
-                </ul>
-              </div>
+            <Social />
           </div>
         </div>
         <div className="login">  

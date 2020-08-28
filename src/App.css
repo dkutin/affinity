@@ -31,7 +31,7 @@
     border-bottom: 2px solid #092327;
     border-top-right-radius: 0%;
     border-bottom-right-radius: 0%;
-    
+
     width: 100% !important;
     max-height: 50vh;
     display: block;
@@ -136,6 +136,11 @@ li + li {
        animation: fadeInTop 2s;
   animation-iteration-count: 1; 
   animation-fill-mode: forwards; 
+}
+
+.splash.post {
+  border-radius: unset !important;
+  border: unset !important;
 }
 
 .links {
