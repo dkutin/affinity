@@ -27,6 +27,11 @@
     min-height: 100vh;
   }
   div.splash {
+    border: unset;
+    border-bottom: 2px solid #092327;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    
     width: 100% !important;
     max-height: 50vh;
     display: block;
@@ -92,6 +97,7 @@ li + li {
 
 .App {
   text-align: center;
+  background-color: #FFFAFA;
 }
 
 .header {
@@ -112,6 +118,9 @@ li + li {
 }
 
 .splash {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-right: 2px solid #092327;
   width: 48%;
   height:100vh;
   position: relative;
@@ -155,7 +164,7 @@ a {
 .feature {
   margin: auto;
   max-width: 275px;
-  background-color: #f3f3f3;
+  background-color: #FFFAFA	;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
