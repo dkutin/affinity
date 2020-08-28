@@ -62,7 +62,11 @@ class App extends Component {
     let state;
     if (this.state.loggedIn) {
       (this.state.items && this.state.audio_features) ? 
-        state = <Chart tracks={this.state.items} features={this.state.audio_features}/> : 
+        state = <React.Fragment>
+                    <Header />
+                    <Chart tracks={this.state.items} features={this.state.audio_features}/>
+                    {/* <Footer /> */}
+                </React.Fragment> : 
         this.getUserTracks();
     } else {
       state = <Login />
@@ -70,9 +74,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Header /> 
         {state}
-        {/* <Footer />  */}
       </div>
     );
   }
