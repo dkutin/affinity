@@ -179,15 +179,12 @@ a {
   margin: 2rem auto;
   max-width: 75% !important;
   max-height: 80vh;
-  opacity: 0;
-  transition-delay: 2s;
 
-  animation-delay: 3s;
-  -webkit-animation: fadeInBottom 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadeInBottom 2s; /* Firefox < 16 */
-   -ms-animation: fadeInBottom 2s; /* Internet Explorer */
-    -o-animation: fadeInBottom 2s; /* Opera < 12.1 */
-       animation: fadeInBottom 2s;
+  -webkit-animation: fadeInBottom 5s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeInBottom 5s; /* Firefox < 16 */
+   -ms-animation: fadeInBottom 5s; /* Internet Explorer */
+    -o-animation: fadeInBottom 5s; /* Opera < 12.1 */
+       animation: fadeInBottom 5s;
   animation-iteration-count: 1; 
   animation-fill-mode: forwards; 
 }
