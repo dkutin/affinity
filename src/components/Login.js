@@ -17,8 +17,8 @@ class Login extends Component {
         </div>
         <div className="login">  
             <h2> Ever wonder how your music taste has progressed over the years? </h2>
-            <h3> we take the top 50 songs in your liked library and create a visual representation of your music, for you. We just need you to authorize a few things first. </h3>
-            <a href={"https://affinity-281921.uc.r.appspot.com/login"}  >
+            <h3> we take the top 50 songs in your liked library and create a visual representation of your music, for you. We just need to set you up through Spotify. </h3>
+            <a href={"https://affinity-server.uc.r.appspot.com/login"}  >
               <div className="home-button"> 
                 <p>lets get started.</p>
               </div>
