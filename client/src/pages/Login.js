@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Social from './Social';
+import Social from '../components/Social';
 
 class Login extends Component {
 

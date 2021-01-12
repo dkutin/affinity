@@ -26,9 +26,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "npm run client:install && npm run client:build"
   },
-  "engines": {
-    "node": "^13.10.0"
-  },
   "devDependencies": {
     "cryptiles": "^4.1.2"
   }

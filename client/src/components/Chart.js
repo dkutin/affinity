@@ -42,7 +42,7 @@ class Chart extends Component {
         "speechiness",
         "valence"
       ]
-      
+
       for (var i = 0; i < this.props.tracks.length; i++) {
         label = this.props.tracks[i].track.name;
         for (var j = 0; j < type.length; j++) {
