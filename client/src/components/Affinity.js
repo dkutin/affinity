@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 
 // Import Page Components
-import Chart from '../components/Chart';
+import Chart from './Chart';
 
 // Import Spotify Web API Handler
 import SpotifyWebApi from 'spotify-web-api-js';
@@ -58,14 +59,17 @@ componentDidMount() {
 }
 
   render() {
-      if (!this.state.items || !this.state.audio_features) {
-        return <div className="App">Waiting...</div>
-      }
-      return (
-        <div className="App">
-          <Chart tracks={this.state.items} features={this.state.audio_features}/>
-        </div>
-      );
+    if (!this.state.loggedIn) {
+      return <Redirect to="/auth/login" />
+    }
+    if (!this.state.items || !this.state.audio_features) {
+      return <div className="App">Waiting...</div>
+    }
+    return (
+      <div className="App">
+        <Chart tracks={this.state.items} features={this.state.audio_features}/>
+      </div>
+    );
   }
 }
 

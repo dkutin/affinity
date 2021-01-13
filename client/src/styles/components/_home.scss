@@ -1,0 +1,75 @@
+.affinity__home {
+    margin-left: 0;
+    margin-right: 0;
+
+    &--title {
+        color: white;
+    }
+
+    &--background {
+        min-height: auto;
+
+        background-image: url('../../assets/img/homepage.png');
+        background-size: cover;
+        background-position: 0 0;
+
+        @include from (m) {
+            min-height: 626px;
+        }
+    }
+
+    &--header {
+        margin-top: 24px;
+
+        @include from (m) {
+            margin-top: 72px;
+        }
+
+        p {
+            font-size: large;
+            color: white;
+            max-width: 560px;
+        }
+    }
+
+    &--intro {
+        margin-top: 12px;
+        border-top: 1px solid lightgrey;
+    }
+
+    &--subtitle {
+        color: $grey;
+        border-width: 50%;
+    }
+
+    &--cta--item {
+        margin-bottom: 72px;
+        margin-right: 12px;
+        margin-top: 72px;
+        // Haha
+        &s {
+           margin-top: 24px;
+           margin-bottom: 48px;
+           margin-right: 24px;
+
+           &.right {
+                margin-right: 0;
+                margin-left: 24px;
+            }
+        }
+
+        h4 {
+            margin: 0;
+            margin-bottom: 12px;
+        }
+    }
+
+    &--image {
+        max-width: 100%;
+
+        > img {
+            object-fit: contain;
+            max-width: 100%;
+        }
+    }
+}

@@ -1,17 +1,20 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
-import Login from '../pages/Login';
-import Affinity from '../pages/Affinity';
+import Home from './Home';
+import Affinity from './Affinity';
+import Nav from './Nav';
 
 const App = () => {
   return (
-    <div className="App">
-      <Switch>
-        <Route exact path="/" component={Login}/>
-        <Route exact path="/app" component={Affinity}/>
-      </Switch>
-    </div>
+    <Grid container className="App">
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/app" component={Affinity}/>
+        </Switch>
+    </Grid>
   );
 }
 
