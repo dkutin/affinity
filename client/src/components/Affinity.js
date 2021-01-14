@@ -60,7 +60,7 @@ componentDidMount() {
 
   render() {
     if (!this.state.loggedIn) {
-      return <Redirect to="/auth/login" />
+      return <Redirect to="/login" />
     }
     if (!this.state.items || !this.state.audio_features) {
       return <div className="App">Waiting...</div>

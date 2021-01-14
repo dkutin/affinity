@@ -7,5 +7,50 @@ body {
 	color: #232323;
 	margin: 0;
 	overflow-y:scroll;
-	padding-bottom: 360px;
+	padding-bottom: 65px;
+
+	@include from (m) {
+		padding-bottom: 130px;
+	}
+}
+
+.link--large {
+
+	text-decoration: none;
+
+	> span {
+		font-size: 14px;
+		padding-bottom: 8px;
+		text-transform: uppercase;
+		color: $grey;
+		margin-right: 16px;
+		transition: 0.1s ease-out;
+
+		@include from(m) {
+			font-size: 24px;
+		}
+
+		&:hover {
+			transition: 0.1s ease-out;
+			color: lightgrey;
+		}
+	}
+
+	&:hover {
+		> svg {
+			transition: 0.1s ease-out;
+			transform: translateX(10px);
+			color: $orange;
+		}
+	}
+
+	> svg {
+		color: $grey;
+	}
+
+	padding: 2px;
+}
+
+p {
+	padding-left: 8px;
 }
