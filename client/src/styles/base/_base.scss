@@ -54,3 +54,39 @@ body {
 p {
 	padding-left: 8px;
 }
+
+.pager {
+	margin-top: 50px;
+	padding-top: 48px;
+
+	&--info {
+		padding-left: 12px;
+		font-size: 18px;
+	}
+
+	&--button {
+		text-decoration: none;
+		background: unset;
+		border: unset;
+		color: $grey;
+		outline: none;
+
+		&.back:hover {
+			> svg {
+				transition: 0.1s ease-out;
+				transform: translateX(-10px);
+				color: $orange;
+			}
+		}
+		
+		&:hover {
+			> svg {
+				transition: 0.1s ease-out;
+				transform: translateX(10px);
+				color: $orange;
+			}
+		}
+	}
+
+	margin: 20px;
+}

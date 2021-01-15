@@ -8,10 +8,10 @@ class Nav extends Component {
             <nav className="affinity__nav">
                 <Grid container>
                     <Grid item xs className="" />
-                    <Grid item xs={10} md={8} lg={6}>
+                    <Grid item xs={10} lg={8} xl={6}>
                         <div className="affinity__nav--items">
                             <div className="affinity__nav--item launch">
-                                <Link className="affinity__nav--link" to="/app">
+                                <Link className="affinity__nav--link" to="/login">
                                     <span className="affinity__nav--text">Launch</span>
                                 </Link>
                             </div>

@@ -1,119 +1,120 @@
 .affinity__home {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 
-    &--title {
-        color: white;
+  &--title {
+    color: white;
+  }
+
+  &--background {
+    min-height: auto;
+    padding-bottom: 36px;
+
+    background-image: url("../../assets/img/homepage.png");
+    background-size: cover;
+    background-position: 0 75%;
+
+    @include from(m) {
+      min-height: 626px;
+    }
+  }
+
+  &--header {
+    margin-top: 124px;
+
+    @include from(m) {
+      margin-top: 172px;
     }
 
-    &--background {
-        min-height: auto;
-        padding-bottom: 36px;
+    p {
+      font-size: large;
+      color: white;
+      max-width: 560px;
+    }
+  }
 
-        background-image: url('../../assets/img/homepage.png');
-        background-size: cover;
-        background-position: 0 50%;
+  &--intro {
+    margin-top: 72px;
+    border-top: 1px solid lightgrey;
+  }
 
-        @include from (m) {
-            min-height: 626px;
-        }
+  &--subtitle {
+    color: $grey;
+    border-width: 50%;
+  }
+
+  &--cta {
+    text-align: center;
+    margin-top: 48px;
+    letter-spacing: 6px;
+    color: $grey;
+
+    > a {
+      text-decoration: none;
+      transition: 0.3s ease-in-out;
+
+      > span {
+        font-size: 24px;
+      }
     }
 
-    &--header {
-        margin-top: 124px;
-
-        @include from (m) {
-            margin-top: 172px;
-        }
-
-        p {
-            font-size: large;
-            color: white;
-            max-width: 560px;
-        }
-    }
-
-    &--intro {
-        margin-top: 72px;
-        border-top: 1px solid lightgrey;
-    }
-
-    &--subtitle {
-        color: $grey;
-        border-width: 50%;
-    }
-
-    &--cta {
-        text-align: center;
-        margin-top: 48px;
-        letter-spacing: 6px;
-        color: $grey;
-
-        > a {
-            text-decoration: none;
-            transition: 0.3s ease-in-out;
-
-            > span {
-                font-size: 24px;
-            }
-        }
-    
     &--item {
-        margin-bottom: 36px;
+      margin-bottom: 36px;
 
+      @include from(m) {
+        margin-bottom: 72px;
+        margin-right: 12px;
+      }
+      // Haha
+      &s {
         @include from(m) {
-            margin-bottom: 72px;
-            margin-right: 12px;
-        }
-        // Haha
-        &s {
-
-           @include from (m) {
-            margin-right: 24px;
-           }
-
-           &.right {
-                @include from (m) {
-                    margin-right: 0;
-                    margin-left: 24px;
-                }
-            }
+          margin-right: 24px;
         }
 
-        h4 {
-            margin: 0;
-            margin-bottom: 12px;
-            padding-left: 8px;
+        &.right {
+          @include from(m) {
+            margin-right: 0;
+            margin-left: 24px;
+          }
         }
+      }
+
+      h4 {
+        margin: 0;
+        margin-bottom: 12px;
+        padding-left: 8px;
+      }
     }
-}
+  }
 
-    &--image {
-        max-width: 100%;
-        text-align: center;
-        background-color: lightgrey;
-        opacity: 0.8;
-        border-radius: 36px;
-        filter: drop-shadow(1px 12px 3px #c3c3c3);
+  &--image {
+    max-width: 100%;
+    text-align: center;
+    background-color: lightgrey;
+    opacity: 0.8;
+    border-radius: 36px;
+    filter: drop-shadow(1px 12px 3px #c3c3c3);
 
-        > img {
-            margin: 12px 0;
-            object-fit: contain;
-            max-width: 100%;
-            filter: blur(2px);
-        }
+    @include from(m) {
+      margin-left: 12px;
     }
 
-    &--info {
-        margin-bottom: 24px;
-        &:not(:first-of-type) {
-            padding-top: 48px;
-
-            @include from (m) {
-                padding-top: 72px;
-            }
-            border-top: 1px solid lightgrey;
-        }
+    > img {
+      margin: 12px 0;
+      object-fit: contain;
+      max-width: 100%;
+      filter: blur(2px);
     }
+  }
 
+  &--info {
+    margin-bottom: 24px;
+    &:not(:first-of-type) {
+      padding-top: 18px;
+      @include from(m) {
+        padding-top: 24px;
+      }
+      border-top: 1px solid lightgrey;
+    }
+  }
 }

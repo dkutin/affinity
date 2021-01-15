@@ -103,13 +103,7 @@ app.get('/callback', function(req, res) {
           json: true
         };
 
-        // use the access token to access the Spotify Web API
-        request.get(options, function(error, response, body) {
-          console.log(body);
-        });
-
-        // we can also pass the token to the browser to make requests from there
-        res.redirect('app/#' + 
+        res.redirect('app#' + 
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
@@ -148,8 +142,10 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+if (process.env.NODE_ENV === 'production') {
+  app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  });
+}
 
 app.listen(process.env.PORT || 5000);
