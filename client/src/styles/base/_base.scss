@@ -4,13 +4,29 @@
 }
 
 body {
-	color: #232323;
+	color: $grey;
 	margin: 0;
-	overflow-y:scroll;
-	padding-bottom: 65px;
+	overflow-y: scroll;
+}
 
-	@include from (m) {
-		padding-bottom: 130px;
+.link {
+	text-decoration: none;
+	margin: 8px 2px;
+
+	> span {
+		font-size: 18px;
+		padding: 4px;
+		color: $grey;
+		transition: 0.1s ease-out;
+
+		@include from (m) {
+			padding: 8px 12px;
+		}
+
+		&:hover {
+			transition: 0.1s ease-out;
+			color: $orange;
+		}
 	}
 }
 

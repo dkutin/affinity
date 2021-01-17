@@ -4,7 +4,8 @@ import Grid from '@material-ui/core/Grid';
 
 import Home from './Home';
 import Affinity from './Affinity';
-import Nav from './Nav';
+import Nav from './components/Nav';
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -14,8 +15,9 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/app" component={Affinity} />
-          <Route exact path="/login" render={() => (window.location.reload())} />
+          <Route exact path="/login" render={() => (window.location.reload() )} />
         </Switch>
+        <Footer />
       </Grid>
     </main>
   );

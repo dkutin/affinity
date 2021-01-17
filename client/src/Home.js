@@ -3,8 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import ArrowForward from '@material-ui/icons/ArrowForwardIos';
 import { Link } from "react-router-dom";
 
-import Image from '../assets/img/graph1.png'
-import Image2 from '../assets/img/graph2.png'
+import Image from './assets/img/graph1.png'
+import Image2 from './assets/img/graph2.png'
 
 
 class Home extends Component {
@@ -58,7 +58,7 @@ class Home extends Component {
           </Grid>
           <Grid container className="affinity__home--info">
             <Grid item xs={10} lg={8}>
-              <h2 class="affinity__home--subtitle">Visualize your library.</h2>
+              <h2 className="affinity__home--subtitle">Visualize your library.</h2>
             </Grid>
             <Grid item xs={12} md={6}>
               <div className="affinity__home--cta--items">

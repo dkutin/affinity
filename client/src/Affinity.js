@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 
 // Import Page Components
-import Chart from './Chart';
+import Chart from './components/Chart';
 
 // Import Spotify Web API Handler
 import SpotifyWebApi from 'spotify-web-api-js';
@@ -81,6 +81,10 @@ class Affinity extends Component {
           <Grid item xs />
           <Grid item xs={10} lg={8} xl={6}>
             <Grid item xs={12}>
+              <div className="affinity__app--intro-text">
+                <h2>Your top 50 liked songs</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.</p>
+              </div>
               <div style={{ marginTop: "24px", marginBottom: "48px" }}>
                 <Chart tracks={this.state.items} features={this.state.audio_features} />
               </div>

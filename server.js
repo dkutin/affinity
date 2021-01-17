@@ -1,3 +1,4 @@
+'use strict'
 /**
  * This is an example of a basic node.js script that performs
  * the Authorization Code oAuth2 flow to authenticate against
@@ -18,18 +19,20 @@ const http = require('http');
 dotenv.config();
 
 const port = process.env.PORT || 5000;
-const client_id = process.env.CLIENT_ID; // Your client id
-const client_secret = process.env.CLIENT_SECRET; // Your secret
-const redirect_uri = process.env.REDIRECT_URI + '/callback'; // Or Your redirect uri
+const client_id = process.env.CLIENT_ID;
+const client_secret = process.env.CLIENT_SECRET;
+const redirect_uri = process.env.REDIRECT_URI + '/callback';
+const stateKey = 'spotify_auth_state';
+const scope = 'user-read-private user-library-read';
 
 /**
  * Generates a random string containing numbers and letters
  * @param  {number} length The length of the string
  * @return {string} The generated string
  */
-var generateRandomString = function(length) {
-  var text = '';
-  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+const generateRandomString = (length) => {
+  let text = '';
+  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
   for (var i = 0; i < length; i++) {
     text += possible.charAt(Math.floor(Math.random() * possible.length));
@@ -37,31 +40,32 @@ var generateRandomString = function(length) {
   return text;
 };
 
-var stateKey = 'spotify_auth_state';
+const app = express();
 
-var app = express();
-
-app.use(cookieParser())
-   .use(express.static(path.join(__dirname, "client", "build")));
-
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "client", "build")));
 app.set('trust proxy', true);
 
 app.get('/login', function(req, res) {
 
-  var state = generateRandomString(16);
+  let state = generateRandomString(16);
   res.cookie(stateKey, state);
 
   // your application requests authorization
-  var scope = 'user-read-private user-read-email user-read-playback-state user-library-read';
-  res.redirect('https://accounts.spotify.com/authorize?' +
-    querystring.stringify({
-      response_type: 'code',
-      client_id: client_id,
-      scope: scope,
-      redirect_uri: redirect_uri,
-      state: state
-    }));
+  res.redirect(
+    ('https://accounts.spotify.com/authorize?' +
+      querystring.stringify({
+        response_type: 'code',
+        client_id: client_id,
+        scope: scope,
+        redirect_uri: redirect_uri,
+        state: state
+      })
+    ));
 });
+
+// Define logout
+// app.get('auth/logout')
 
 app.get('/callback', function(req, res) {
 
@@ -98,7 +102,7 @@ app.get('/callback', function(req, res) {
         var access_token = body.access_token,
             refresh_token = body.refresh_token;
 
-        res.redirect('app#' + 
+        res.redirect('/app#' + 
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token

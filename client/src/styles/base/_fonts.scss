@@ -8,6 +8,7 @@ h1,
 h2 {
 	font-size: 36px;
 	max-width: 620px;
+	color: $grey;
 
 	@include from (m) {
 		font-size: 48px;
@@ -18,11 +19,18 @@ h3,
 h4,
 h5,
 h6 {
+	color: $grey;
 	font-size: 24px;
 
 	@include from (m) {
 		font-size: 36px;
 	}
+}
+
+h6 {
+	color: $grey;
+	font-size: 22px;
+	margin: 12px;
 }
 
 p,

@@ -12,7 +12,8 @@
 
     background-image: url("../../assets/img/homepage.png");
     background-size: cover;
-    background-position: 0 75%;
+    background-position: 100% 50%;
+    background-attachment: fixed;
 
     @include from(m) {
       min-height: 626px;
@@ -103,7 +104,6 @@
       margin: 12px 0;
       object-fit: contain;
       max-width: 100%;
-      filter: blur(2px);
     }
   }
 

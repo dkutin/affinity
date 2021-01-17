@@ -21,13 +21,14 @@
     "client:install": "npm install --prefix client",
     "client:build": "npm run build --prefix client",
     "start": "node server.js",
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"node server.js\" \"npm run client\"",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "npm run client:install && npm run client:build"
   },
   "devDependencies": {
-    "cryptiles": "^4.1.2"
+    "cryptiles": "^4.1.2",
+    "nodemon": "^2.0.7"
   }
 }

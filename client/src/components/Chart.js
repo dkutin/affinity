@@ -38,7 +38,7 @@ class Chart extends PureComponent {
 	render() {
 		const tracks = this.props.tracks.slice(this.state.offset * 5, this.state.paging);
 		const features = this.props.features.slice(this.state.offset * 5, this.state.paging);
-		const total = this.props.tracks.length / this.state.increment;
+		const total = Math.ceil(this.props.tracks.length / this.state.increment);
 
 		const data = tracks.map((track, index) => {
 			return ({
