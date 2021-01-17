@@ -10,7 +10,7 @@ import {
 class Chart extends PureComponent {
 	constructor() {
 		super();
-		this.state = { 
+		this.state = {
 			offset: 0,
 			paging: 5,
 			increment: 5
@@ -19,8 +19,8 @@ class Chart extends PureComponent {
 
 	pageUp = () => {
 		if (this.state.offset < 9) {
-			this.setState({ 
-				offset: this.state.offset + 1, 
+			this.setState({
+				offset: this.state.offset + 1,
 				paging: this.state.paging + this.state.increment
 			});
 		}
@@ -28,7 +28,7 @@ class Chart extends PureComponent {
 
 	pageDown = () => {
 		if (this.state.offset > 0) {
-			this.setState({ 
+			this.setState({
 				offset: this.state.offset - 1,
 				paging: this.state.paging - this.state.increment
 			});
@@ -77,7 +77,7 @@ class Chart extends PureComponent {
 						<Line dataKey="valence" stroke="#EC7594" />
 					</LineChart>
 				</Grid>
-				<Grid item xs={10} style={{textAlign: 'center'}}>
+				<Grid item xs={10} style={{ textAlign: 'center' }}>
 					<div className="pager">
 						<button className="pager--button back" onClick={this.pageDown}>
 							<ArrowBack className="colorPrimary fontSizeSmall" />
@@ -85,7 +85,7 @@ class Chart extends PureComponent {
 						<button className="pager--button" onClick={this.pageUp}>
 							<ArrowForward className="colorPrimary fontSizeSmall" />
 						</button>
-						<span className="pager--info">Page { this.state.offset >= 0 ?  this.state.offset + 1 : 0 } of {total}</span>
+						<span className="pager--info">Page {this.state.offset >= 0 ? this.state.offset + 1 : 0} of {total}</span>
 					</div>
 				</Grid>
 			</Grid>

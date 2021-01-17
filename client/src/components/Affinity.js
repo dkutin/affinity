@@ -81,7 +81,7 @@ class Affinity extends Component {
           <Grid item xs />
           <Grid item xs={10} lg={8} xl={6}>
             <Grid item xs={12}>
-              <div style={{marginTop: "24px", marginBottom: "48px"}}>
+              <div style={{ marginTop: "24px", marginBottom: "48px" }}>
                 <Chart tracks={this.state.items} features={this.state.audio_features} />
               </div>
             </Grid>

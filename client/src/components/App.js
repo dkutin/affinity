@@ -8,13 +8,16 @@ import Nav from './Nav';
 
 const App = () => {
   return (
-    <Grid container className="App">
+    <main>
+      <Grid container className="App">
         <Nav />
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/app" component={Affinity}/>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/app" component={Affinity} />
+          <Route exact path="/login" render={() => (window.location.reload())} />
         </Switch>
-    </Grid>
+      </Grid>
+    </main>
   );
 }
 

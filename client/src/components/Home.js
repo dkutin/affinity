@@ -3,8 +3,8 @@ import Grid from '@material-ui/core/Grid';
 import ArrowForward from '@material-ui/icons/ArrowForwardIos';
 import { Link } from "react-router-dom";
 
-import Image2 from '../assets/img/graph1.png'
-import Image from '../assets/img/graph2.png'
+import Image from '../assets/img/graph1.png'
+import Image2 from '../assets/img/graph2.png'
 
 
 class Home extends Component {
