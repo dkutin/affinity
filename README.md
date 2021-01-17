@@ -7,7 +7,8 @@ Using Spotify's ability to score tracks based on 'affinity', I created an app th
 Being a big fan of music, and listening to it for 6 hours a day while coding, I wondered what my music taste progression would be like from the time I started using Spotify, until now. Because of this, I created an app that visualizes different metrics available from the Spotify API to help visualize your music taste. 
 
 ## Usage
-https://affinity.dmitrykutin.com
+https://dev-affinity.herokuapp.com/
+
 ** Work in Progress ** 
 
 Log in through spotify to see a visualization of your last 20 songs and common metrics associated with them.  
