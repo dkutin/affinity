@@ -67,7 +67,7 @@ class Chart extends PureComponent {
 					>
 						<CartesianGrid strokeDasharray="6 6" />
 						<YAxis type="number" height={60} />
-						<XAxis dataKey="name" type="category" />
+						<XAxis interval={0} dataKey="name" type="category" />
 						<Tooltip />
 						<Legend />
 						<Line dataKey="danceability" stroke="#8884d8" />
