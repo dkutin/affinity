@@ -9,6 +9,26 @@ body {
 	overflow-y: scroll;
 }
 
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid $grey;
+	padding: 2px 0;
+	padding-left: 12px;
+	font-weight: 600;
+	font-size: 23px;
+
+	&:focus-visible {
+		outline: none;
+		border-bottom: 1px solid $orange;
+	}
+}
+
 .link {
 	text-decoration: none;
 	margin: 8px 2px;
@@ -31,7 +51,7 @@ body {
 }
 
 .link--large {
-
+	margin: 20px;
 	text-decoration: none;
 
 	> span {
@@ -103,6 +123,12 @@ p {
 			}
 		}
 	}
+}
 
-	margin: 20px;
+.hidden {
+	display: none;
+}
+
+.divider {
+	border-bottom: 1px solid $grey;
 }

@@ -14,11 +14,11 @@ class Footer extends Component {
 					<Grid item xs className="" />
 					<Grid item container xs={10} lg={8} xl={6}>
 						<Grid item xs={12} sm={4} className="affinity__footer--spacing affinity__footer--links">
-							<Link className="link" to={"/home"}>
+							<Link className="link" to={"/"}>
 								<span className="affinity__nav--text">Home</span></Link>
-							<Link className="link" to={"/login"}><span className="affinity__nav--text">Login</span></Link>
+							<Link className="link" to={"/survey"}><span className="affinity__nav--text">Launch</span></Link>
+							<Link className="link" to={"/explore"}><span className="affinity__nav--text">Explore</span></Link>
 							<Link className="link" to={"/about"}><span className="affinity__nav--text">About</span></Link>
-							<Link className="link" to={"/contact"}><span className="affinity__nav--text">Contact</span></Link>
 						</Grid>
 						<Grid item xs={12} sm={4} className="affinity__footer--spacing">
 							<p className="affinity__footer--text">Made with <span role="img" aria-label="heart">❤️</span> and <span role="img" aria-label="coffee">☕️</span></p>

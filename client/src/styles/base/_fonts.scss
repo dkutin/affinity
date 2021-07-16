@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+button,
+input,
 body {
 	font-family: 'Poppins', sans-serif;
 }
@@ -27,6 +29,16 @@ h6 {
 	}
 }
 
+h4 {
+	color: $grey;
+	font-size: 20px;
+}
+
+h5 {
+	color: $grey;
+	font-size: 18px;
+}
+
 h6 {
 	color: $grey;
 	font-size: 22px;
@@ -37,4 +49,8 @@ p,
 span,
 a {
 	font-weight: 400;
+}
+
+button {
+	color: $grey;
 }

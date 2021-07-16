@@ -1,0 +1,30 @@
+.affinity__artist {
+    border-right: 1px solid $grey;
+
+    &:last-of-type {
+        border-right: none;
+    }
+
+    &--feature {
+        margin: 48px 0;
+        padding: 0 12px;
+
+        h5 {
+            margin: 0;
+            margin-top: 6px;
+            margin-bottom: 12px;
+        }
+
+        h4 {
+            margin-top: 24px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__img {
+        margin: 12px;
+        border-radius: 100%;
+        width: 90px;
+        height: 90px;
+    }
+}

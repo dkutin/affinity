@@ -48,6 +48,10 @@
             cursor: pointer;
             background-color: $white;
         }
+
+        &:last-of-type{
+            text-align: right;
+        }
     }
 
     &--link {
