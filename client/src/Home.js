@@ -1,12 +1,11 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import ArrowForward from '@material-ui/icons/ArrowForwardIos';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import Image from './assets/img/graph1.png'
 import Image2 from './assets/img/graph2.png'
-
 
 function Home() {
 
@@ -22,7 +21,7 @@ function Home() {
               {t('home.title')}
             </h1>
             <p>
-              You provide a list of your favourite artists, we do the rest. Using Spotify's API, we find artists similar to those that you most often listen to, without you ever needing a Spotify account.
+              {t('home.intro')}
             </p>
           </div>
         </Grid>
@@ -32,18 +31,18 @@ function Home() {
         <Grid item xs className="" />
         <Grid item xs={10} lg={8} xl={6}>
           <div className="affinity__home--intro">
-            <h2 className="affinity__home--subtitle">See your artist recommendations.</h2>
+            <h2 className="affinity__home--subtitle">{t('home.subtitle.1')}</h2>
             <Grid container className="affinity__home--info">
               <Grid item xs={10} md={6}>
                 <div className="affinity__home--cta--items">
                   <div className="affinity__home--cta--item">
-                    <h4>See your listening habits</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </p>
+                    <h4>{t('home.ctaItem.1.title')}</h4>
+                    <p>{t('home.ctaItem.1.intro')}</p>
                   </div>
                   <div className="affinity__home--cta--item">
-                    <h4>Explore New Genres</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </p>
+                    <h4>{t('home.ctaItem.2.title')}</h4>
+                    <p>{t('home.ctaItem.2.intro.1')}</p>
+                    <p>{t('home.ctaItem.2.intro.2')}</p>
                   </div>
                 </div>
               </Grid>
@@ -59,7 +58,7 @@ function Home() {
             </Grid>
             <Grid container className="affinity__home--info">
               <Grid item xs={10} lg={8}>
-                <h2 className="affinity__home--subtitle">Visualize your music taste.</h2>
+                <h2 className="affinity__home--subtitle">{t('home.subtitle.2')}</h2>
               </Grid>
               <Grid item xs={12} md={6}>
                 <div className="affinity__home--cta--items">
@@ -73,13 +72,13 @@ function Home() {
               <Grid item xs={10} md={6}>
                 <div className="affinity__home--cta--items right">
                   <div className="affinity__home--cta--item">
-                    <h4>See your listening habits</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </p>
+                    <h4>{t('home.ctaItem.3.title')}</h4>
+                    <p>{t('home.ctaItem.3.intro.1')}</p>
+                    <p>{t('home.ctaItem.3.intro.2')}</p>
                   </div>
                   <div className="affinity__home--cta--item">
-                    <h4>Explore New Genres</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. </p>
+                    <h4>{t('home.ctaItem.4.title')}</h4>
+                    <p>{t('home.ctaItem.4.intro')}</p>
                   </div>
                 </div>
               </Grid>
@@ -89,7 +88,7 @@ function Home() {
                 <div className="affinity__home--cta">
                   <Link className="link--large" to="/survey">
                     <span>
-                      Let's get started
+                    {t('home.cta')}
                     </span>
                     <ArrowForward className="colorPrimary fontSizeSmall" />
                   </Link>

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import i18n from './i18n';
 import { BrowserRouter } from 'react-router-dom';
-import { I18nextProvider } from "react-i18next";
+import { I18nextProvider } from 'react-i18next';
 
 import './styles/_main.scss';
 
