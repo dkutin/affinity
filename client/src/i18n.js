@@ -5,6 +5,9 @@ i18n.use(LanguageDetector).init({
   resources: {
     en: {
       translations: {
+        site: {
+          title: 'affinity | a Spotify Visualizer'
+        },
         navBar: {
           langSwitcher: 'fr',
           launch: 'Launch',
@@ -58,6 +61,9 @@ i18n.use(LanguageDetector).init({
     },
     fr: {
       translations: {
+        site: {
+          title: 'affinity | un visualiseur Spotify'
+        },
         navBar: {
             langSwitcher: 'en',
             launch: 'Lancer',

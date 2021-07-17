@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Icon from '../assets/img/favicon.png'
@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next';
 function Nav() {
 	const [lang, setLang] = useState('en');
 	const [t, i18n] = useTranslation();
+
+	useEffect(() => { document.title = t('site.title') }, [t, lang]);
 
 	const handleLangChange = () => {
 		const newLang = lang === 'en' ? 'fr' : 'en'
