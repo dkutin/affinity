@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+button,
+input,
+body {
+	font-family: 'Poppins', sans-serif;
+}
+h1,
+h2 {
+	font-size: 36px;
+	max-width: 620px;
+	color: $grey;
+
+	@include from (m) {
+		font-size: 48px;
+	}
+}
+
+h3,
+h4,
+h5,
+h6 {
+	color: $grey;
+	font-size: 24px;
+
+	@include from (m) {
+		font-size: 36px;
+	}
+}
+
+h4 {
+	color: $grey;
+	font-size: 20px;
+}
+
+h5 {
+	color: $grey;
+	font-size: 18px;
+}
+
+h6 {
+	color: $grey;
+	font-size: 22px;
+	margin: 12px;
+}
+
+p,
+span,
+a {
+	font-weight: 400;
+}
+
+button {
+	color: $grey;
+}

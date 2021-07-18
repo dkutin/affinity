@@ -1,0 +1,37 @@
+.affinity__survey {
+    &--indicator {
+        margin: 32px 0;
+        display: inline-block;
+    }
+
+    &--form {
+        &-button {
+            margin: 12px 0;
+            padding: 0 6px;
+
+            &:hover {
+                color: $orange;
+                transition: 0.2s;
+            }
+        }
+
+        &-select {
+            display: inline-block;
+            width: 75%;
+        }
+
+        &-remove {
+            margin: 0 12px;
+        }
+
+        &-artist {
+            text-align: center;
+            min-width: 24px;
+            display: inline-block;
+        }
+
+        &-entry {
+            margin: 12px 0;
+        }
+    }
+}

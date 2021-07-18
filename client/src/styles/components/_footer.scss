@@ -1,0 +1,72 @@
+.affinity__footer {
+    min-width: 100%;
+    margin-top: 48px;
+    border-top: 1px solid lightgrey;
+
+    &--spacing {
+        padding: 26px 0;
+        margin-top: 8px;
+
+        &:not(:first-of-type) {
+            border-top: 1px solid lightgrey;
+
+            @include from (m) {
+                border: none;
+            }
+        }
+
+        @include from (m) {
+            padding-top: 58px;
+        }
+    }
+
+    &--text {
+        margin: 8px;
+        text-align: center;
+        padding: 0;
+    }
+
+    &--links {
+        text-align: center;
+        margin: 12px 0;
+
+        @include from (m) {
+            text-align: left;
+        }
+
+        > a {
+            display: inline-block;
+            text-align: left;
+        }
+    }
+
+    &--icons {
+        text-align: center;
+
+        @include from (m) {
+            text-align: right;
+        }
+
+        > a {
+            display: inline-block;
+            margin: 8px;
+            padding: 0 8px;
+            text-decoration: none;
+            color: $grey;
+            transition: 0.2s ease-out;
+
+            @include from (s) {
+                text-align: center;
+            }
+
+            @include from (m) {
+                display: inline-block;
+            }
+
+            &:hover {
+                color: $orange;
+                transition: 0.2s ease-out;
+            }
+        }
+    }
+}

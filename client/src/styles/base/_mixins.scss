@@ -1,0 +1,9 @@
+// Media Queries
+
+@mixin from($bp) {
+    $bp-value: map-get($breakpoints-min, $bp);
+
+    @media only screen and (min-width: $bp-value) {
+        @content;
+    }
+}

@@ -1,8 +1,8 @@
 {
   "author": "Dmitry Kutin <dmitrykutin@outlook.com>",
-  "name": "affinity-server",
+  "name": "affinity",
   "description": "Authentication server for Spotify affinity.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "server.js",
   "repository": "git@github.com:dkutin/affinity.git",
   "private": true,
@@ -13,23 +13,27 @@
     "core-util-is": "^1.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "http": "^0.0.1-security",
     "querystring": "~0.2.0",
     "request": "^2.88.2"
   },
   "scripts": {
-    "client:install": "npm install --prefix client",
-    "client:build": "npm run build --prefix client",
+    "client:install": "yarn --cwd ./client install",
+    "client:build": "yarn --cwd ./client build",
     "start": "node server.js",
-    "server": "node server.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"node server.js\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "yarn --cwd ./client start",
+    "dev": "concurrently \"yarn server\" \"yarn client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "npm run client:install && npm run client:build"
+    "heroku-postbuild": "yarn client:install && yarn client:build"
   },
   "engines": {
-    "node": "^13.10.0"
+    "node": "15.5.0",
+    "yarn": "1.22.10",
+    "npm": "7.3.0"
   },
   "devDependencies": {
-    "cryptiles": "^4.1.2"
+    "cryptiles": "^4.1.2",
+    "nodemon": "^2.0.7"
   }
 }

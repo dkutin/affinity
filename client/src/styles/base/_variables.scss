@@ -1,0 +1,23 @@
+/*
+ *  Theme Variables
+ */
+$white: #f3f3f3;
+$grey: #595f72;
+$orange: #F87870;
+$dark-red: #280004;
+
+/*
+ *  Media Variables
+ */
+ $breakpoints-min: (
+    's': 576px,
+    'm': 768px,
+    'l': 992px,
+    'xl': 1470px,
+ );
+ $breakpoints-max : (
+     's': map-get($breakpoints-min, 's') - 1px,
+     'm': map-get($breakpoints-min, 'm') - 1px,
+     'l': map-get($breakpoints-min, 'l') - 1px,
+     'xl': map-get($breakpoints-min, 'xl') - 1px,
+ );
